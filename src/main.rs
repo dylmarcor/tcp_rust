@@ -1,6 +1,9 @@
 use std::io;
 
 fn main() -> io::Result<()> {
-    tun_tap::new("tun0", tun_tap::Mode::Tun).expect("failed to cr")?;
+    let nic = tun_tap::new("tun0", tun_tap::Mode::Tun).expect("failed to cr")?;
+    let mut bug = [0u8; 1504];
+    let read = nic.recv(&mut buf[..])?;
+    eprintln!("read {} bytes: {:x}", nbytes, &buf[..nbytes]);
     Ok(())
 }
