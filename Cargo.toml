@@ -4,3 +4,4 @@ version = "0.1.0"
 authors = ["Dylmarcor <dylancorbett@icloud.com>"]
 
 [dependencies]
+tun_tap = "0.1.2"
